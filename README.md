@@ -1,5 +1,6 @@
 # Directory service with logging
-Terraform AWS module for Directory service directory with cloudwatch logging
+Terraform AWS module for Directory service directory with cloudwatch logging.
+Note that AWS will create a security group automatically.
 
 # Examples
 ## Minimal example
@@ -17,3 +18,5 @@ module "ad" {
   ]
 }
 ```
+
+To access the automatically created security group, use `module.ad.directory_service_directory.security_group_id`.
